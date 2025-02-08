@@ -12,6 +12,8 @@ body {
     padding: 0;
     height: 100vh;
     background-size: cover;
+    overflow-x: hidden; /* Ocultar scroll horizontal */
+    overflow-y: auto;  /* Permitir scroll vertical */
 }
 
 /* Títulos */

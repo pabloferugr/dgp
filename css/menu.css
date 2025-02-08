@@ -1,33 +1,84 @@
 /* Estilos específicos del menú */
-        #menu-general {
-            background: none;
-            border: none;
-            box-shadow: none;
-            padding: 0;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-        }
+#menu-general {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; /* Asegura que los elementos se distribuyan bien */
+    width: 100%;
+}
 
-        #back-arrow {
-            font-size: 1.5rem;
-            padding: 10px 20px;
-            border-radius: 8px;
-            background-color: #ffd700;
-            color: #333;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            display: inline-flex;
-            align-items: center;
-        }
+/* Estilo para el botón de retroceso */
+#back-arrow {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #ffd700;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* Asegura que el contenido del botón esté centrado */
+}
 
-        #back-arrow i {
-            font-size: 1.5rem;
-            margin-right: 10px;
-        }
+/* Icono dentro del botón de retroceso */
+#back-arrow i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
 
-        #back-arrow:hover {
-            background-color: #ffc107;
-            transform: scale(1.05);
-        }
+/* Efecto hover del botón */
+#back-arrow:hover {
+    background-color: #ffc107;
+    transform: scale(1.05);
+}
+
+/* Media Queries para pantallas medianas (tabletas) */
+@media (max-width: 992px) {
+    #back-arrow {
+        font-size: 1.3rem; /* Reducir tamaño del texto en pantallas más pequeñas */
+        padding: 8px 18px; /* Ajustar el padding */
+    }
+
+    #back-arrow i {
+        font-size: 1.3rem; /* Ajustar el tamaño del icono */
+        margin-right: 8px; /* Reducir el espacio entre el icono y el texto */
+    }
+}
+
+/* Media Queries para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    #menu-general {
+        flex-direction: column; /* Apilar los elementos del menú verticalmente */
+        align-items: center; /* Centrar los elementos */
+    }
+
+    #back-arrow {
+        font-size: 1.2rem; /* Reducir aún más el tamaño del texto */
+        padding: 6px 16px; /* Ajustar el padding */
+        margin: 10px 0; /* Añadir separación en móviles */
+    }
+
+    #back-arrow i {
+        font-size: 1.2rem; /* Reducir tamaño del icono */
+        margin-right: 6px; /* Reducir el espacio entre icono y texto */
+    }
+}
+
+/* Media Queries para dispositivos muy pequeños */
+@media (max-width: 480px) {
+    #back-arrow {
+        font-size: 1rem; /* Reducir aún más el tamaño */
+        padding: 5px 12px; /* Ajustar el padding para pantallas pequeñas */
+    }
+
+    #back-arrow i {
+        font-size: 1rem; /* Ajustar icono */
+        margin-right: 5px; /* Ajustar espacio */
+    }
+}

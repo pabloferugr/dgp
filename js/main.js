@@ -85,7 +85,7 @@ function loadView(url) {
             // Configurar eventos y lógica específicos de la vista
             if (url.includes('estudiante_login.html')) {
                 setupPictograms();
-                setupVoiceRecognition();
+                //setupVoiceRecognition();
             }
             setupLoginEvents();
         },
@@ -101,24 +101,32 @@ function loadView(url) {
 // Función para cargar vista por el parámetro de la URL
 function loadViewByQuery(view) {
     const viewUrl = getViewUrl(view);
-    loadView(viewUrl);
+    if (viewUrl) {
+        loadView(viewUrl); // Solo cargamos si hay una URL válida
+    } else {
+        // Mostramos un mensaje de error en el contenedor principal
+        const appContainer = $('#app-container');
+        appContainer.html('<div class="alert alert-danger" role="alert">Vista no encontrada. Por favor, inténtelo de nuevo.</div>');
+    }
 }
 
 // Función para obtener la URL de la vista basada en el nombre
 function getViewUrl(viewName) {
     switch (viewName) {
-    case 'adminLogin':
-        return '/dgp/views/admin_login.html';
-    case 'profesorLogin':
-        return '/dgp/views/profesor_login.html';
-    case 'listaEstudiantes':
-        return '/dgp/views/lista_estudiantes.html';
-    case 'estudianteLogin':
-        return '/dgp/views/estudiante_login.html';
-    default:
-            return '/dgp/views/home.html'; // Ruta por defecto
-        }
+        case 'adminLogin':
+            return '/dgp/views/admin_login.html';
+        case 'profesorLogin':
+            return '/dgp/views/profesor_login.html';
+        case 'listaEstudiantes':
+            return '/dgp/views/lista_estudiantes.html';
+        case 'estudianteLogin':
+            return '/dgp/views/estudiante_login.html';
+        default:
+            // Si no se reconoce la vista, mostramos un mensaje de error
+            showNotification('Vista no encontrada. Por favor, inténtelo de nuevo.', false);
+            return ''; // No redirigimos a ninguna vista
     }
+}
 
 // Función global para mostrar notificaciones
     function showNotification(message, isSuccess) {
@@ -141,13 +149,13 @@ $(document).ready(function () {
         $('body').append('<div id="notification-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;"></div>');
     }
 
-    if (window.location.search.includes('view=estudianteLogin')) {
+    /*if (window.location.search.includes('view=estudianteLogin')) {
         $('#modales').load('/dgp/views/estudiante_login.html', function () {
             setupLoginEvents();
             setupPictograms();
             setupVoiceRecognition();
         });
-    }
+    }*/
 
 });
 

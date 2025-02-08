@@ -10,7 +10,8 @@ body, html {
     font-family: 'Patrick Hand', cursive; /* Fuente amigable */
     height: 100%;
     width: 100%;
-    overflow: hidden; /* Evitar scroll innecesario */
+    overflow-x: hidden; /* Ocultar scroll horizontal */
+    overflow-y: auto;  /* Permitir scroll vertical */
 }
 body, h1, h2 {
     font-family: 'Patrick Hand', cursive;

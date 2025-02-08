@@ -4,16 +4,18 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    width:100%;
+    width: 100%;
     height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto; /* Permitir scroll vertical */
+    overflow-x: hidden; /* Ocultar scroll horizontal */
+    overflow-y: auto;  /* Permitir scroll vertical */
 }
 
 /* Contenedor principal */
 .container {
     max-width: 100%;
     padding-top: 30px; /* Aumentar el espacio superior */
+    padding-bottom: 20px; /* Añadir padding inferior */
+    box-sizing: border-box; /* Asegurar que el padding no afecte el tamaño total */
 }
 
 /* Encabezado */
@@ -47,10 +49,11 @@ h1 {
 
 /* Contenedor de los estudiantes */
 #estudiantes-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Ajustar los iconos en la fila */
-    gap: 15px; /* Reducir el espacio entre los iconos */
+    display: grid; /* Usar grid para un mejor control de las filas */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Crear columnas que se ajusten */
+    gap: 20px; /* Espacio entre los iconos */
+    padding: 0 20px; /* Padding para evitar que los elementos toquen los bordes */
+    justify-items: center; /* Centrar los elementos dentro de cada celda */
 }
 
 /* Cada bloque de estudiante */
@@ -58,7 +61,6 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 9.5%; /* Aproximadamente 10 iconos por fila */
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -80,11 +82,11 @@ h1 {
     }
 
     #estudiantes-container {
-        justify-content: center; /* Centrar los iconos */
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajustar las columnas */
     }
 
     .student-item {
-        width: 30%; /* Ajustar el tamaño de los iconos */
+        width: 90%; /* Ajustar el tamaño de los iconos */
     }
 }
 
@@ -96,7 +98,7 @@ h1 {
     }
 
     .student-item {
-        width: 45%; /* Reducir cantidad de iconos por fila */
+        width: 80%; /* Reducir cantidad de iconos por fila */
     }
 
     .student-icon {
