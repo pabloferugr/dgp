@@ -359,7 +359,6 @@ function setupPictograms() {
 }
 
 
-// Función para iniciar sesión por voz
 function setupVoiceRecognition() {
     let recognitionActive = false;
     let step = 1; // 1: Usuario, 2: Contraseña
@@ -410,12 +409,12 @@ function setupVoiceRecognition() {
                 console.log("Texto reconocido:", transcript);
 
                 if (step === 1) {
-                    username = transcript;
+                    username = convertWordsToNumbers(transcript); // Convertir palabras a números
                     showNotification(`Nombre de usuario reconocido: ${username}`, true);
                     step = 2;
                     setTimeout(startRecognition, 1000); // Pasar a la contraseña
                 } else if (step === 2) {
-                    password = convertWordsToNumbers(transcript);
+                    password = convertWordsToNumbers(transcript); // Convertir palabras a números
                     showNotification(`Contraseña reconocida: ${password}`, true);
                     recognitionActive = false;
                     handleVoiceLogin(username, password);
@@ -506,7 +505,16 @@ function setupVoiceRecognition() {
             uno: '1', dos: '2', tres: '3', cuatro: '4', cinco: '5',
             seis: '6', siete: '7', ocho: '8', nueve: '9', cero: '0'
         };
-        return text.split(/\s+/).map(word => numberWords[word.toLowerCase()] || word).join('');
+
+        return text.split(/\s+/).map(word => {
+            const lowerWord = word.toLowerCase();
+            if (numberWords[lowerWord]) {
+                return numberWords[lowerWord];
+            } else {
+                console.log(`Palabra no reconocida: ${word}`);
+                return word; // O puedes retornar un valor por defecto si prefieres.
+            }
+        }).join('');
     }
 }
 
