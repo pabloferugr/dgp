@@ -1,0 +1,252 @@
+body, h1, h2, .form-label, .btn {
+    font-family: 'Comic Neue', sans-serif !important;
+}
+
+body {
+    background: linear-gradient(135deg, #6DD5FA 0%, #3B5998 50%, #8E44AD 100%);
+    font-family: 'Patrick Hand', cursive; /* Fuente amigable */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container.login-estudiante {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 85vh;
+    padding-top: 0px;
+    padding-bottom: 50px;
+}
+
+/* Formulario */
+.login-form {
+    width: 100%;
+    max-width: 800px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8));
+    border-radius: 15px;
+    padding: 30px;
+    margin: 0 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover en el formulario */
+/*.login-form:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}*/
+
+/* Títulos */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0056b3;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Etiquetas */
+.form-label {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Input */
+.form-control {
+    font-size: 1.6rem;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    width: 100%;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 6px rgba(0, 86, 179, 0.6);
+}
+
+/* Botones */
+.btn {
+    font-size: 1.8rem;
+    padding: 12px 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #003d80;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Leyenda de pictogramas */
+#pictogram-legend {
+    margin: 15px 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+#pictogram-legend li {
+    font-size: 1.5rem;
+    padding: 8px 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    list-style: none;
+}
+
+/* Contenedor de pictogramas */
+#pictogram-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+#pictogram-container img {
+    width: 70px;
+    height: 70px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+#pictogram-container img:hover {
+    transform: scale(1.1);
+    border-color: #0056b3;
+}
+
+/* Contraseña seleccionada */
+.password-preview {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #0056b3;
+    margin-top: 15px;
+}
+
+/* Mensaje de error */
+.alert {
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.6rem;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 2px solid #f5c6cb;
+}
+
+/* Ajustes de responsividad */
+@media (max-width: 1200px) {
+    .login-form {
+        max-width: 700px;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .form-label, .btn {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .login-form {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .form-label, .btn {
+        font-size: 1.5rem;
+    }
+
+    #pictogram-container img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-form {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .form-label, .btn {
+        font-size: 1.4rem;
+    }
+
+    #pictogram-container img {
+        width: 55px;
+        height: 55px;
+    }
+
+    #pictogram-legend li {
+        font-size: 1.3rem;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-form {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .form-label, .btn {
+        font-size: 1.2rem;
+    }
+
+    #pictogram-container img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #pictogram-legend li {
+        font-size: 1.2rem;
+        padding: 5px 8px;
+    }
+}

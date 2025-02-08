@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Profesor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/dgp/css/profesor_login.css">
+</head>
+<body>
+    <!-- Menú -->
+    <div id="menu-placeholder"></div>
+
+    <!-- Contenedor Principal -->
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="login-container shadow p-4 rounded bg-white">
+            <h1 class="text-center mb-4">Login Profesor</h1>
+            <form id="profesorLoginForm">
+                <input type="hidden" name="tipo" value="profesor">
+                <div class="mb-3">
+                    <label for="profesor_nombre_usuario" class="form-label">Nombre de Usuario</label>
+                    <input type="text" class="form-control" id="profesor_nombre_usuario" name="nombre_usuario" required>
+                </div>
+                <div class="mb-3">
+                    <label for="profesor_password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="profesor_password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Cargar dinámicamente el menú
+        $(document).ready(function () {
+            $('#menu-placeholder').load('/dgp/views/menu.html');
+        });
+    </script>
+</body>
+</html>

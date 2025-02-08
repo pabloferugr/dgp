@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú</title>
+    <link rel="stylesheet" type="text/css" href="/dgp/css/menu.css">
+</head>
+<body>
+    <div id="menu-general" class="d-flex align-items-center p-3">
+        <button id="back-arrow" class="btn d-flex align-items-center">
+            <i class="fas fa-arrow-left me-2"></i> VOLVER
+        </button>
+    </div>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $('#back-arrow').on('click', function () {
+            // Detectar si estamos en el login de estudiante
+            if (window.location.href.includes('view=estudianteLogin')) {
+                // Volver a la lista de estudiantes
+                window.location.href = '/dgp/index.php?view=listaEstudiantes';
+            } else {
+                // Volver al inicio para cualquier otra página
+                window.location.href = '/dgp/index.php?page=home';
+            }
+        });
+    });
+</script>

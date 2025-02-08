@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro de Usuarios</title>
+    <link rel="stylesheet" type="text/css" href="/dgp/css/admin_modales.css">
+    
+</head>
+<body>
+<!-- Modal registro de estudiante -->
+<!-- Modal registro de estudiante -->
+<div class="modal fade" id="registerStudentModal" tabindex="-1" aria-labelledby="registerStudentLabel" aria-hidden="true" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="registerStudentLabel">Registrar Estudiante</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <form id="registerStudentForm" aria-labelledby="registerStudentLabel">
+                    <div class="mb-3">
+                        <label for="studentName" class="form-label">Nombre del Estudiante</label>
+                        <input type="text" class="form-control" id="studentName" name="nombre_usuario" required aria-required="true" aria-describedby="studentNameHelp">
+                        <div id="studentNameHelp" class="form-text">Introduce el nombre completo del estudiante.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="studentPassword" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="studentPassword" name="password" required 
+                        pattern="\d{1,6}" 
+                        title="La contraseña debe ser numérica y de máximo 6 caracteres."
+                        aria-required="true" aria-describedby="studentPasswordHelp">
+                        <div id="studentPasswordHelp" class="form-text">La contraseña debe ser numérica y de máximo 6 caracteres.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="studentPhoto" class="form-label">Foto</label>
+                        <input type="file" class="form-control" id="studentPhoto" name="foto" accept="image/*" required aria-required="true" aria-describedby="studentPhotoHelp">
+                        <div id="studentPhotoHelp" class="form-text">Sube una foto reciente del estudiante en formato JPG o PNG.</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" aria-label="Registrar estudiante">Registrar</button>
+                    <div id="notification-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal registro de profesor -->
+<!-- Modal registro de profesor -->
+<div class="modal fade" id="registerTeacherModal" tabindex="-1" aria-labelledby="registerTeacherLabel" aria-hidden="true" role="dialog">
+    <div class="modal-dialog"> <!-- Tamaño estándar, igual que el del estudiante -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="registerTeacherLabel">Registrar Profesor</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <form id="registerTeacherForm" aria-labelledby="registerTeacherLabel">
+                    <div class="mb-3">
+                        <label for="teacherName" class="form-label">Nombre del Profesor</label>
+                        <input type="text" class="form-control" id="teacherName" name="nombre_usuario" required 
+                            aria-required="true" aria-describedby="teacherNameHelp">
+                        <div id="teacherNameHelp" class="form-text">Introduce el nombre completo del profesor.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="teacherPassword" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="teacherPassword" name="password" required
+                            pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};:'\\\|,.<>\/?]).{8,20}$"
+                            title="La contraseña debe tener entre 8 y 20 caracteres, incluir al menos una letra mayúscula, una letra minúscula, un número y un símbolo especial."
+                            aria-required="true" aria-describedby="teacherPasswordHelp">
+                        <div id="teacherPasswordHelp" class="form-text">La contraseña debe cumplir con los requisitos establecidos.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="teacherPhoto" class="form-label">Foto</label>
+                        <input type="file" class="form-control" id="teacherPhoto" name="foto" accept="image/*" required 
+                            aria-required="true" aria-describedby="teacherPhotoHelp">
+                        <div id="teacherPhotoHelp" class="form-text">Sube una foto reciente del profesor en formato JPG o PNG.</div>
+                    </div>
+                    <button type="submit" class="btn btn-register" aria-label="Registrar profesor">Registrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

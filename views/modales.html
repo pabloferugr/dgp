@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/dgp/css/styles.css">
+</head>
+<body>
+<!-- Modal de Login Admin -->
+<div class="modal fade" id="loginAdmin" tabindex="-1" aria-labelledby="loginAdminLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginAdminLabel">Login Admin</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="adminLoginForm">
+                    <input type="hidden" name="tipo" value="admin">
+                    <div class="mb-3">
+                        <label for="admin_nombre_usuario" class="form-label">Nombre de Usuario</label>
+                        <input type="text" class="form-control" id="admin_nombre_usuario" name="nombre_usuario" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="admin_password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="admin_password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Modal Login Estudiante -->
+<div class="modal fade" id="loginEstudiante" tabindex="-1" aria-labelledby="loginEstudianteLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginEstudianteLabel">Login Estudiante</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="estudianteLoginForm">
+                    <!-- Nombre de usuario -->
+                    <div class="mb-3">
+                        <label for="estudiante_nombre_usuario" class="form-label">Nombre de Usuario</label>
+                        <input type="text" class="form-control" id="estudiante_nombre_usuario" name="nombre_usuario" required>
+                    </div>
+                    <!-- Contraseña con pictogramas -->
+                    <div class="mb-2">
+                        <p>Selecciona los pictogramas en el orden correcto:</p>
+                        <div id="pictogram-container" class="d-flex justify-content-center flex-wrap">
+                            <!-- Aquí se cargarán los pictogramas de forma aleatoria -->
+                        </div>
+                    </div>
+                      <!-- Leyenda de pictogramas -->
+                    <div class="mb-3">
+                        <h6>Leyenda de Pictogramas:</h6>
+                        <ul id="pictogram-legend" class="list-unstyled d-flex flex-wrap">
+                            <!-- Leyenda dinámica generada aquí -->
+                        </ul>
+                    </div>
+                    <div id="password-preview" class="password-preview">
+                        Contraseña Introducida: <span id="selected-password"></span>
+                    </div>
+
+                    <div class="mt-3">
+                        <button type="button" id="delete-last-pictogram" class="btn btn-warning">Eliminar Último</button>
+                        <button type="button" id="clear-password" class="btn btn-secondary">Limpiar Todo</button>
+                    </div>
+                    <div class="d-flex mt-4 align-items-center">
+                        <button type="button" id="submit-password" class="btn btn-primary me-2">Iniciar Sesión</button>
+                        <button type="button" id="startVoiceRecognition" class="btn btn-success">
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                    </div>
+                    <div class="mt-3">
+                        <div class="alert alert-danger mt-3 d-none" id="voice-error">
+                            No se pudo reconocer tu voz. Intenta nuevamente.
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Login Profesor -->
+<div class="modal fade" id="loginProfesor" tabindex="-1" aria-labelledby="loginProfesorLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginProfesorLabel">Login Profesor</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="profesorLoginForm">
+                    <input type="hidden" name="tipo" value="profesor">
+                    <div class="mb-3">
+                        <label for="profesor_nombre_usuario" class="form-label">Nombre de Usuario</label>
+                        <input type="text" class="form-control" id="profesor_nombre_usuario" name="nombre_usuario" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="profesor_password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="profesor_password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+

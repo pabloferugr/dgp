@@ -1,0 +1,33 @@
+/* Estilos específicos del menú */
+        #menu-general {
+            background: none;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        #back-arrow {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background-color: #ffd700;
+            color: #333;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        #back-arrow i {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        #back-arrow:hover {
+            background-color: #ffc107;
+            transform: scale(1.05);
+        }

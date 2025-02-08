@@ -1,0 +1,130 @@
+body {
+    background: linear-gradient(135deg, #6DD5FA 0%, #3B5998 50%, #8E44AD 100%);
+    font-family: 'Patrick Hand', cursive; /* Fuente amigable */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    width:100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto; /* Permitir scroll vertical */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 100%;
+    padding-top: 30px; /* Aumentar el espacio superior */
+}
+
+/* Encabezado */
+h1 {
+    font-size: 4rem; /* Tamaño aumentado para el encabezado */
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4); /* Más sombra para destacar */
+    margin-top: -100px; /* Subir más el título (ajustar el valor según sea necesario) */
+    margin-bottom: 30px; /* Mayor separación inferior */
+    text-align: center;
+}
+
+/* Estilos para los iconos de los estudiantes */
+.student-icon {
+    width: 120px; /* Aumentar el tamaño del icono */
+    height: 120px;
+    border-radius: 50%; /* Forma circular */
+    object-fit: cover; /* Ajuste de la imagen */
+    margin-bottom: 10px; /* Separación entre la imagen y el nombre */
+}
+
+/* Nombre del estudiante */
+.student-name {
+    font-size: 2rem; /* Aumentar tamaño de la fuente */
+    font-weight: bold;
+    color: white; /* Cambiar color a blanco */
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Contenedor de los estudiantes */
+#estudiantes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ajustar los iconos en la fila */
+    gap: 15px; /* Reducir el espacio entre los iconos */
+}
+
+/* Cada bloque de estudiante */
+.student-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 9.5%; /* Aproximadamente 10 iconos por fila */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.student-item:hover {
+    transform: translateY(-10px); /* Efecto de hover */
+}
+
+/* Mejor distribución del contenido en pantallas medianas */
+@media (max-width: 992px) {
+    .container {
+        padding-top: 20px;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        margin-top: -50px;
+    }
+
+    #estudiantes-container {
+        justify-content: center; /* Centrar los iconos */
+    }
+
+    .student-item {
+        width: 30%; /* Ajustar el tamaño de los iconos */
+    }
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+        margin-top: -30px;
+    }
+
+    .student-item {
+        width: 45%; /* Reducir cantidad de iconos por fila */
+    }
+
+    .student-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .student-name {
+        font-size: 1.2rem;
+    }
+}
+
+/* Ajuste para dispositivos muy pequeños */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .student-item {
+        width: 100%; /* Un solo icono por fila */
+    }
+
+    .student-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .student-name {
+        font-size: 1rem;
+    }
+}

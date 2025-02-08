@@ -1,0 +1,196 @@
+body, h1, h2, .form-label, .btn {
+    font-family: 'Comic Neue', sans-serif !important;
+}
+
+
+/* General */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Patrick Hand', cursive; /* Fuente amigable */
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Evitar scroll innecesario */
+}
+body, h1, h2 {
+    font-family: 'Patrick Hand', cursive;
+}
+
+/* Estructura Principal */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+/* Contenedor del título y botones */
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Espacio entre el título y los botones */
+    align-items: center;
+    padding: 20px;
+background: linear-gradient(135deg, #6DD5FA 0%, #3B5998 50%, #8E44AD 100%);
+    color: white;
+}
+
+h1#main-title {
+    font-size: 5rem; /* Tamaño grande */
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    position: relative; /* Permite posicionar los botones dentro del título */
+    padding-left: 99px;
+    margin-left: 100px;
+}
+
+/* Botones en la esquina superior derecha */
+.header-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Estilo de los botones */
+.header-buttons .btn {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header-buttons .btn.btn-primary {
+    background-color: #4A90E2; /* Azul para Administrador */
+    font-family: 'Patrick Hand', cursive;
+}
+
+.header-buttons .btn.btn-primary:hover {
+    background-color: #357ABD; /* Azul más oscuro al pasar el mouse */
+}
+
+.header-buttons .btn.btn-success {
+    background-color: #7BC043; /* Verde para Profesor */
+    font-family: 'Patrick Hand', cursive;
+}
+
+.header-buttons .btn.btn-success:hover {
+    background-color: #5A9E32; /* Verde más oscuro al pasar el mouse */
+}
+
+/* Contenedor de Secciones */
+.sections-container {
+    display: flex;
+    flex: 1; /* Ocupa el resto del espacio */
+    width: 100%;
+}
+
+/* Sección Estudiante ocupa toda la pantalla */
+.section.estudiante {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 5rem; /* Tamaño grande */
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    height: 100%;
+    color: white;
+background: linear-gradient(135deg, #6DD5FA 0%, #3B5998 50%, #8E44AD 100%);
+    font-family: 'Patrick Hand', cursive;
+}
+
+.section.estudiante:hover {
+    transform: scale(1.03); /* Efecto sutil */
+}
+
+.estudiante h2 {
+    color: #FFFFFF;
+    font-size: 4rem;
+}
+
+/* Imagen grande estilo avatar para la sección Estudiante */
+.estudiante-avatar {
+    width: 250px;  /* Tamaño grande de la imagen */
+    height: 250px;
+    border-radius: 50%; /* Imagen redonda como un muñeco/avatar */
+    object-fit: cover; /* Ajuste para que la imagen se vea bien centrada */
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra para que se destaque del fondo */
+    border: 5px solid #FFFFFF; /* Borde blanco para resaltar sobre el fondo */
+}
+
+/* Botón de reconocimiento de voz más grande y claro */
+#startVoiceRecognition {
+    margin-top: 20px;
+    font-size: 2rem; /* Texto más grande */
+    padding: 15px 30px; /* Más espacio interno */
+    border-radius: 15px;
+    background-color: #A3E4D7; /* Verde claro para mejor contraste */
+    color: #333; /* Texto oscuro para buen contraste */
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto hover para el botón */
+#startVoiceRecognition:hover {
+    background-color: #76D7C4; /* Verde un poco más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño en hover */
+}
+
+
+/* Mejorar la distribución del header en pantallas pequeñas */
+@media (max-width: 992px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-buttons {
+        margin-top: 10px;
+    }
+}
+
+/* Ajustar el tamaño del título y la imagen en pantallas pequeñas */
+@media (max-width: 768px) {
+    h1#main-title {
+        font-size: 3rem;
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .estudiante-avatar {
+        width: 200px;
+        height: 200px;
+    }
+
+    .header-buttons .btn {
+        font-size: 1.2rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Ajuste para dispositivos muy pequeños */
+@media (max-width: 480px) {
+    h1#main-title {
+        font-size: 2.5rem;
+    }
+
+    .estudiante-avatar {
+        width: 150px;
+        height: 150px;
+    }
+
+    .header-buttons .btn {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+}

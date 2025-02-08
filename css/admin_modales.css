@@ -1,0 +1,16 @@
+ /* Botón de Registrar dentro del formulario */
+button.btn-register {
+    background-color: #218838; /* Verde más oscuro */
+    color: white;
+    font-size: 1.5rem;
+    padding: 15px 25px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Patrick Hand', cursive;
+}
+
+/* Efectos de hover para el botón de Registrar dentro del formulario */
+button.btn-register:hover {
+    transform: scale(1.05);
+    background-color: #1e7e34; /* Verde aún más oscuro */
+}

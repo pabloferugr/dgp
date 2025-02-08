@@ -1,0 +1,119 @@
+ /* Estilos generales */
+ body, h1, h2, .form-label, .btn {
+    font-family: 'Comic Neue', sans-serif !important;
+}
+
+/* Fondo */
+body {
+    background: linear-gradient(135deg, #4A90E2 0%, #77B3F2 50%, #A4D6FA 100%);
+    font-family: 'Patrick Hand', cursive;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-size: cover;
+}
+h2{
+    /* Etiquetas de formulario (labels) */
+
+    color: #333; /* Cambiar el color de los labels a un gris oscuro para mejor visibilidad */
+
+
+}
+
+/* Barra de navegación */
+.navbar {
+    background: linear-gradient(135deg, #4A90E2 0%, #77B3F2 50%, #A4D6FA 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.d-flex img {
+    border-radius: 50%;
+}
+
+.navbar-text {
+    font-weight: bold;
+    color: white;
+}
+
+/* Botón de Cerrar sesión */
+.btn-danger {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #e74c3c;
+    transform: scale(1.05);
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 100%;
+}
+
+/* Títulos */
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/* Botones */
+button.btn-primary, button.btn-success {
+    font-size: 1.5rem;
+    padding: 15px 25px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Patrick Hand', cursive;
+}
+
+button.btn-primary {
+    background-color: #1f64d4; /* Azul más oscuro */
+    color: white;
+}
+
+button.btn-success {
+    background-color: #218838; /* Verde más oscuro */
+    color: white;
+}
+
+/* Efectos de hover para los botones */
+button.btn-primary:hover, button.btn-success:hover {
+    transform: scale(1.05);
+}
+
+button.btn-primary:hover {
+    background-color: #1a5fc4;
+}
+
+button.btn-success:hover {
+    background-color: #1e7e34; /* Verde aún más oscuro */
+}
+
+
+/* Etiquetas de formulario (labels) */
+label {
+    color: #333; /* Cambiar el color de los labels a un gris oscuro para mejor visibilidad */
+}
+
+
+/* Respuesta a pantallas pequeñas */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    button.btn-primary, button.btn-success {
+        font-size: 1.2rem;
+    }
+
+    .navbar-text {
+        font-size: 1rem;
+    }
+}

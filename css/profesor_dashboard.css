@@ -1,0 +1,117 @@
+/* Estilos generales */
+body, h1, h2, .form-label, .btn {
+    font-family: 'Comic Neue', sans-serif !important;
+}
+
+/* Fondo */
+body {
+    background: linear-gradient(135deg, #7BC043 0%, #9DDB70 50%, #BEF28C 100%);
+    font-family: 'Patrick Hand', cursive;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-size: cover;
+}
+
+/* Títulos */
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/* Barra de navegación */
+.navbar {
+    background: linear-gradient(135deg, #7BC043 0%, #9DDB70 50%, #BEF28C 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-text {
+    font-weight: bold;
+    color: white;
+}
+
+/* Imagen de perfil */
+.d-flex img {
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Botón de Cerrar sesión */
+.btn-danger {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #e74c3c;
+    transform: scale(1.05);
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 100%;
+}
+
+/* Botones */
+button.btn-primary, button.btn-success {
+    font-size: 1.5rem;
+    padding: 15px 25px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Patrick Hand', cursive;
+}
+
+/* Botones */
+button.btn-primary {
+    background-color: #1f64d4; /* Azul más oscuro */
+    color: white;
+}
+
+button.btn-primary:hover {
+    background-color: #1a5fc4;
+    transform: scale(1.05);
+}
+
+
+/* Lista de estudiantes */
+.list-group-item {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+/* Etiquetas de formulario */
+label {
+    color: #333; /* Gris oscuro */
+}
+
+/* Notificaciones */
+#notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+/* Respuesta a pantallas pequeñas */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    button.btn-primary {
+        font-size: 1.2rem;
+    }
+
+    .navbar-text {
+        font-size: 1rem;
+    }
+}

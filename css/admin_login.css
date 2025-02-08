@@ -1,0 +1,103 @@
+/* Fondo */
+body {
+    background: linear-gradient(135deg, #4A90E2 0%, #77B3F2 50%, #A4D6FA 100%);
+    font-family: 'Patrick Hand', cursive;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 100%;
+}
+
+/* Contenedor del formulario */
+.login-container {
+    width: 100%;
+    max-width: 500px; /* Tamaño más compacto y estándar */
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Borde sutil */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    margin-top: 0px;
+    margin-bottom: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover en el formulario */
+.login-container:hover {
+    transform: scale(1.02); /* Efecto de crecimiento sutil */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+/* Títulos */
+h1 {
+    font-size: 2.5rem; /* Título tamaño normal */
+    font-weight: bold;
+    color: #4a4a4a;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Etiquetas de campos */
+.form-label {
+    font-size: 1.2rem; /* Tamaño de texto estándar */
+    color: #555;
+}
+
+/* Campos de entrada */
+.form-control {
+    font-size: 1.2rem;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #f0f4ff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Enfocar campos */
+.form-control:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 10px rgba(37, 117, 252, 0.4);
+}
+
+/* Placeholder */
+.form-control::placeholder {
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+/* Botón */
+button.btn-primary {
+    background-color: #2575fc;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Patrick Hand', cursive;
+}
+
+/* Efecto Hover */
+button.btn-primary:hover {
+    background-color: #1a5fc4; /* Azul más oscuro en hover */
+    transform: scale(1.02); /* Ligero aumento en hover */
+}
+
+/* Respuesta a pantallas pequeñas */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2rem; /* Título más pequeño en pantallas pequeñas */
+    }
+
+    .form-label, .form-control, button {
+        font-size: 1rem; /* Texto más pequeño para móviles */
+    }
+}

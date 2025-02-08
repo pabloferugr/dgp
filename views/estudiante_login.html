@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Estudiante</title>
+    
+    <link rel="stylesheet" type="text/css" href="/dgp/css/estudiante_login.css">
+</head>
+
+<body>
+<div id="menu-placeholder"></div>
+
+<div class="container login-estudiante d-flex justify-content-center align-items-center vh-100">
+    <div class="login-form p-4 bg-white rounded shadow">
+        <h1 class="text-center mb-4">Login Estudiante</h1>
+        <form id="estudianteLoginForm">
+            <!-- Nombre de usuario -->
+            <div class="mb-3">
+                <label for="estudiante_nombre_usuario" class="form-label">Nombre de Usuario</label>
+                <input type="text" class="form-control" id="estudiante_nombre_usuario" name="nombre_usuario" required>
+            </div>
+            <!-- Contraseña con pictogramas -->
+            <div class="mb-2">
+                <h4>Selecciona los pictogramas en el orden correcto:</h4>
+                <div id="pictogram-container" class="d-flex justify-content-center flex-wrap">
+                    <!-- Aquí se cargarán los pictogramas de forma aleatoria -->
+                </div>
+            </div>
+            <!-- Leyenda de pictogramas -->
+            <div class="mb-3">
+                <h4>Leyenda de Pictogramas:</h4>
+                <ul id="pictogram-legend" class="list-unstyled d-flex flex-wrap">
+                    <!-- Leyenda dinámica generada aquí -->
+                </ul>
+            </div>
+            <div id="password-preview" class="password-preview">
+                Contraseña Introducida: <span id="selected-password"></span>
+            </div>
+
+            <div class="mt-3">
+                <button type="button" id="submit-password" class="btn btn-primary me-2">Iniciar Sesión</button>
+                <!--<button type="button" id="delete-last-pictogram" class="btn btn-warning me-2">Eliminar Último</button>-->
+                                <button type="button" id="delete-last-pictogram" class="btn btn-secondary">Eliminar Último</button>
+
+                <button type="button" id="clear-password" class="btn btn-secondary">Limpiar Todo</button>
+                
+            </div>
+            <!--<div class="d-flex mt-4 align-items-center">
+                
+                <button type="button" id="startVoiceRecognition" class="btn btn-success">
+                    <i class="fas fa-microphone"></i> Iniciar Sesión por Voz
+                </button>
+            </div>-->
+            <div class="mt-3">
+                <div class="alert alert-danger mt-3 d-none" id="voice-error">
+                    No se pudo reconocer tu voz. Intenta nuevamente.
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+// estudiante_login.html
+$(document).ready(function () {
+    // Cargar dinámicamente el menú
+    $('#menu-placeholder').load('/dgp/views/menu.html');
+
+    // Autocompletar el campo de nombre de usuario para estudiantes
+    if (window.location.href.includes('view=estudianteLogin')) {
+        const selectedStudentName = localStorage.getItem('selectedStudentName');
+
+        if (selectedStudentName) {
+            $('#estudiante_nombre_usuario').val(selectedStudentName);
+        } else {
+            alert('No se seleccionó ningún estudiante. Redirigiendo...');
+            window.location.href = '/dgp/index.php?view=listaEstudiantes'; // Redirigir si no hay selección previa
+        }
+    }
+
+    
+});
+</script>
+
