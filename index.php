@@ -51,31 +51,32 @@ switch ($page) {
     <!-- Enlace a Google Fonts para Patrick Hand -->
     <!--<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" type="text/css" href="bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Enlace a Font Awesome para iconos -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome-free-6.7.2-web/css/all.min.css">
 
 </head>
 <body>
     <div class="main-container" id="app-container" role="main" aria-live="polite">
 
 
-       <!-- Contenedor del título y botones -->
-<div class="header-container">
-    <h1 id="main-title">Agenda PTVAl San Rafael</h1>
-    <div class="header-buttons">
-        <button class="btn btn-primary section admin" data-target="adminLogin">Administrador</button>
-        <button class="btn btn-success section profesor" data-target="profesorLogin">Profesor</button>
+     <!-- Contenedor del título y botones -->
+     <div class="header-container">
+        <h1 id="main-title">Agenda PTVAl San Rafael</h1>
+        <div class="header-buttons">
+            <button class="btn btn-primary section admin" data-target="adminLogin">Administrador</button>
+            <button class="btn btn-success section profesor" data-target="profesorLogin">Profesor</button>
+        </div>
     </div>
-</div>
 
 
-        <!-- Secciones que ocupan el resto del espacio -->
-        <div class="sections-container">
-            <!-- Sección Administrador -->
+    <!-- Secciones que ocupan el resto del espacio -->
+    <div class="sections-container">
+        <!-- Sección Administrador -->
            <!-- <div class="section admin" data-target="adminLogin" tabindex="0">
                 <h2>Administrador</h2>
             </div>-->
@@ -87,7 +88,7 @@ switch ($page) {
 
             <!-- Sección Estudiante -->
             <div class="section estudiante" data-target="listaEstudiantes" tabindex="0">
-<img src="/dgp/images/avatar.webp" alt="Avatar Estudiante" class="estudiante-avatar">
+                <img src="/dgp/images/avatar.webp" alt="Avatar Estudiante" class="estudiante-avatar">
 
                 <h2>Estudiante</h2>
                 <button class="btn btn-success" id="startVoiceRecognition">
@@ -100,12 +101,10 @@ switch ($page) {
 
     <div id="modales" role="region" aria-label="Modales"></div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript">
-        
-    </script>
+    <script src="/dgp/js/jquery-3.7.1.min.js"></script>
+    <script src="/dgp/js/popper.min.js"></script>
+    <script src="/dgp/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+   
     <script src="/dgp/js/main.js"></script>
 </body>
 </html>

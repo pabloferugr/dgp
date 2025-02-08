@@ -75,9 +75,9 @@ h1 {
 
 /* Botones */
 .btn {
-    font-size: 1.8rem;
-    padding: 12px 18px;
-    border-radius: 10px;
+    font-size: 1.6rem; /* Reducido de 1.8rem */
+    padding: 10px 16px; /* Reducido de 12px 18px */
+    border-radius: 8px; /* Ligeramente reducido */
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -105,23 +105,40 @@ h1 {
     background-color: #5a6268;
 }
 
-/* Leyenda de pictogramas */
+/* Contenedor de la leyenda de pictogramas a la izquierda */
+.pictogram-legend-container {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pictogram-legend-container h4 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 #pictogram-legend {
-    margin: 15px 0;
-    padding: 0;
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 }
 
 #pictogram-legend li {
-    font-size: 1.5rem;
-    padding: 8px 12px;
+    font-size: 1.3rem;
+    padding: 6px 10px;
     border: 2px solid #ccc;
     border-radius: 8px;
     background-color: #f8f9fa;
     list-style: none;
+    text-align: center;
 }
 
 /* Contenedor de pictogramas */

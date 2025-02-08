@@ -17,7 +17,7 @@ $nombreUsuario = $userData['nombre_usuario'] ?? 'Usuario';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Estudiante</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/dgp/bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/dgp/css/estudiante_dashboard.css">
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
 
@@ -71,9 +71,9 @@ $nombreUsuario = $userData['nombre_usuario'] ?? 'Usuario';
     <div id="notification-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;" aria-live="polite"></div>
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/dgp/js/jquery-3.7.1.min.js"></script>
+    <script src="/dgp/js/popper.min.js"></script>
+    <script src="/dgp/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
