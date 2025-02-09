@@ -49,6 +49,7 @@ $(document).ready(function () {
             const formData = new FormData(this); // Usar FormData para manejar archivos
 
             $.ajax({
+                async: true,
                 url: '/dgp/ajax/register_student.php',
                 method: 'POST',
                 data: formData,
@@ -96,6 +97,7 @@ $(document).ready(function () {
     const formData = new FormData(this); // Usar FormData para manejar archivos
 
     $.ajax({
+        async: true,
         url: '/dgp/ajax/register_teacher.php',
         method: 'POST',
         data: formData,

@@ -45,6 +45,7 @@ $(document).ready(function () {
         const tipo = form.find('input[name="tipo"]').val();
 
         $.ajax({
+            async: true,
             url: '/dgp/ajax/login.php',
             method: 'POST',
             data: form.serialize(),
@@ -77,6 +78,7 @@ function loadView(url) {
     appContainer.html('<div class="loading-spinner text-center"><p>Cargando...</p></div>');
 
     $.ajax({
+        async: true,
         url: url,
         method: 'GET',
         success: function (data) {
@@ -184,6 +186,7 @@ function setupLoginEvents() {
 
         // Enviar los datos al servidor mediante Ajax
         $.ajax({
+            async: true,
             url: '/dgp/ajax/login.php',
             method: 'POST',
             data: {
@@ -219,6 +222,7 @@ function handleLogin(form, expectedRole) {
     submitButton.prop('disabled', true);
 
     $.ajax({
+        async: true,
         url: '/dgp/ajax/login.php',
         method: 'POST',
         data: form.serialize(),
@@ -335,6 +339,7 @@ function setupPictograms() {
         }
 
         $.ajax({
+            async: true,
             url: '/dgp/ajax/login.php',
             method: 'POST',
             data: {
@@ -476,6 +481,7 @@ function setupVoiceRecognition() {
         console.log("Enviando datos al servidor:", { username, password });
 
         $.ajax({
+            async: true,
             url: '/dgp/ajax/login.php', // Ruta del backend para validar el login
             method: 'POST',
             data: {

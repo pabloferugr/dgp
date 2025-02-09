@@ -54,6 +54,8 @@ $nombreUsuario = $user['nombre_usuario'] ?? 'Profesor';
     <div id="notification-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;" aria-live="polite"></div>
 
     <!-- Scripts -->
+    <script src="/dgp/js/jquery-3.7.1.min.js"></script>
+    <script src="/dgp/js/popper.min.js"></script>
     <script src="/dgp/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

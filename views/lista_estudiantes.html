@@ -15,7 +15,6 @@
         <div id="estudiantes-container" class="row"></div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function () {
             $('#menu-placeholder').load('/dgp/views/menu.html');
@@ -30,6 +29,7 @@
 
             // Obtener la lista de estudiantes
             $.ajax({
+                async: true,
                 url: '/dgp/ajax/get_estudiantes.php', // Ruta del backend
                 method: 'GET',
                 dataType: 'json',

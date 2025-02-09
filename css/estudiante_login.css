@@ -113,6 +113,7 @@ h1 {
     text-align: center;
 }
 
+
 /* Contenedor de pictogramas */
 #pictogram-container {
     display: flex;
@@ -122,15 +123,14 @@ h1 {
 }
 
 #pictogram-container img {
-    width: auto;
-    height: clamp(40px, 7vw, 70px);
-    max-width: 100%;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.2s ease, border-color 0.2s ease;
-    object-fit: contain;
+    width: clamp(40px, 7vw, 70px);  /* Ajusta el tamaño */
+    height: clamp(40px, 7vw, 70px); /* Ajusta el tamaño */
+    padding: 0; /* Evita espaciado interno */
+    margin: 0; /* Evita márgenes innecesarios */
+    object-fit: cover; /* Hace que la imagen cubra todo sin dejar espacios */
+
 }
+
 
 #pictogram-container img:hover {
     transform: scale(1.1);
