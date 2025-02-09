@@ -1,15 +1,17 @@
+/* Fuente global */
 body, h1, h2, .form-label, .btn {
     font-family: 'Comic Neue', sans-serif !important;
 }
 
+/* Fondo y ajustes generales */
 body {
     background: linear-gradient(135deg, #6DD5FA 0%, #3B5998 50%, #8E44AD 100%);
-    font-family: 'Patrick Hand', cursive; /* Fuente amigable */
+    font-family: 'Patrick Hand', cursive;
     color: #333;
     margin: 0;
     padding: 0;
-    overflow-x: hidden !important; /* Ocultar scroll horizontal */
-    overflow-y: auto ;  /* Permitir scroll vertical */
+    overflow-x: hidden !important;
+    overflow-y: auto;
 }
 
 /* Contenedor principal */
@@ -18,8 +20,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     min-height: 85vh;
-    padding-top: 0px;
-    padding-bottom: 50px;
+    padding: 5vh 5vw; /* Adaptable */
 }
 
 /* Formulario */
@@ -28,56 +29,42 @@ body {
     max-width: 800px;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8));
     border-radius: 15px;
-    padding: 30px;
-    margin: 0 15px;
+    padding: clamp(15px, 3vw, 30px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto hover en el formulario */
-/*.login-form:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-}*/
-
 /* Títulos */
 h1 {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
     font-weight: bold;
     color: #0056b3;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: clamp(10px, 3vw, 20px);
 }
 
 /* Etiquetas */
 .form-label {
-    font-size: 1.8rem;
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
     font-weight: 700;
-    color: #333;
     margin-bottom: 10px;
     display: block;
 }
 
 /* Input */
 .form-control {
-    font-size: 1.6rem;
-    padding: 15px;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    padding: clamp(8px, 2vw, 15px);
     border-radius: 10px;
     border: 2px solid #ccc;
     width: 100%;
 }
 
-.form-control:focus {
-    outline: none;
-    border-color: #0056b3;
-    box-shadow: 0 0 6px rgba(0, 86, 179, 0.6);
-}
-
 /* Botones */
 .btn {
-    font-size: 1.6rem; /* Reducido de 1.8rem */
-    padding: 10px 16px; /* Reducido de 12px 18px */
-    border-radius: 8px; /* Ligeramente reducido */
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 16px);
+    border-radius: 8px;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -96,48 +83,33 @@ h1 {
     background-color: #003d80;
 }
 
-.btn-secondary {
-    background-color: #6c757d;
-    color: #fff;
-}
-
-.btn-secondary:hover {
-    background-color: #5a6268;
-}
-
-/* Contenedor de la leyenda de pictogramas a la izquierda */
+/* Contenedor de la leyenda en formato horizontal */
 .pictogram-legend-container {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 200px;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px 0;
 }
 
-.pictogram-legend-container h4 {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
+/* Lista de pictogramas en una sola línea sin scroll */
 #pictogram-legend {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(5px, 2vw, 10px);
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
+/* Estilos de cada pictograma */
 #pictogram-legend li {
-    font-size: 1.3rem;
-    padding: 6px 10px;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    padding: clamp(6px, 1.5vw, 8px) clamp(8px, 2vw, 12px);
     border: 2px solid #ccc;
     border-radius: 8px;
     background-color: #f8f9fa;
-    list-style: none;
     text-align: center;
 }
 
@@ -145,17 +117,19 @@ h1 {
 #pictogram-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: clamp(5px, 2vw, 10px);
     justify-content: center;
 }
 
 #pictogram-container img {
-    width: 70px;
-    height: 70px;
+    width: auto;
+    height: clamp(40px, 7vw, 70px);
+    max-width: 100%;
     border: 2px solid transparent;
     border-radius: 8px;
     cursor: pointer;
     transition: transform 0.2s ease, border-color 0.2s ease;
+    object-fit: contain;
 }
 
 #pictogram-container img:hover {
@@ -163,9 +137,39 @@ h1 {
     border-color: #0056b3;
 }
 
+/* Ajuste del botón de retroceso */
+#back-arrow {
+    position: fixed;
+    top: 2vh;
+    left: 2vw;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    padding: clamp(6px, 1.5vw, 10px) clamp(10px, 2vw, 20px);
+    border-radius: 8px;
+    background-color: #ffd700;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Icono dentro del botón */
+#back-arrow i {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    margin-right: 8px;
+}
+
+#back-arrow:hover {
+    background-color: #ffc107;
+    transform: scale(1.05);
+}
+
 /* Contraseña seleccionada */
 .password-preview {
-    font-size: 1.8rem;
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
     font-weight: 600;
     color: #0056b3;
     margin-top: 15px;
@@ -175,97 +179,11 @@ h1 {
 .alert {
     padding: 15px;
     border-radius: 10px;
-    font-size: 1.6rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
 }
 
 .alert-danger {
     background-color: #f8d7da;
     color: #721c24;
     border: 2px solid #f5c6cb;
-}
-
-/* Ajustes de responsividad */
-@media (max-width: 1200px) {
-    .login-form {
-        max-width: 700px;
-        padding: 25px;
-    }
-
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    .form-label, .btn {
-        font-size: 1.6rem;
-    }
-}
-
-@media (max-width: 992px) {
-    .login-form {
-        max-width: 90%;
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .form-label, .btn {
-        font-size: 1.5rem;
-    }
-
-    #pictogram-container img {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-@media (max-width: 768px) {
-    .login-form {
-        max-width: 95%;
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    .form-label, .btn {
-        font-size: 1.4rem;
-    }
-
-    #pictogram-container img {
-        width: 55px;
-        height: 55px;
-    }
-
-    #pictogram-legend li {
-        font-size: 1.3rem;
-        padding: 6px 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .login-form {
-        max-width: 100%;
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 1.6rem;
-    }
-
-    .form-label, .btn {
-        font-size: 1.2rem;
-    }
-
-    #pictogram-container img {
-        width: 50px;
-        height: 50px;
-    }
-
-    #pictogram-legend li {
-        font-size: 1.2rem;
-        padding: 5px 8px;
-    }
 }

@@ -1,20 +1,16 @@
-/* Estilos específicos del menú */
+/* Asegura que el botón esté correctamente posicionado */
 #menu-general {
-    background: none;
-    border: none;
-    box-shadow: none;
-    padding: 0;
-    height: auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between; /* Asegura que los elementos se distribuyan bien */
-    width: 100%;
+    position: relative;
+    z-index: 10;
 }
 
-/* Estilo para el botón de retroceso */
+/* Botón de retroceso responsivo */
 #back-arrow {
-    font-size: 1.5rem;
-    padding: 10px 20px;
+    position: fixed; /* Fijo en la pantalla para siempre estar visible */
+    top: 2vh; /* Espaciado dinámico desde arriba */
+    left: 2vw; /* Espaciado dinámico desde la izquierda */
+    font-size: clamp(1rem, 2.5vw, 1.5rem); /* Tamaño de fuente adaptable */
+    padding: clamp(6px, 1.5vw, 12px) clamp(10px, 2vw, 20px); /* Padding adaptable */
     border-radius: 8px;
     background-color: #ffd700;
     color: #333;
@@ -23,18 +19,18 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
     display: inline-flex;
     align-items: center;
-    justify-content: center; /* Asegura que el contenido del botón esté centrado */
+    justify-content: center;
+    z-index: 1000; /* Se mantiene por encima del formulario */
 }
 
-/* Icono dentro del botón de retroceso */
+/* Icono dentro del botón */
 #back-arrow i {
-    font-size: 1.5rem;
-    margin-right: 10px;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    margin-right: 8px;
 }
 
-/* Efecto hover del botón */
+/* Efecto hover */
 #back-arrow:hover {
     background-color: #ffc107;
     transform: scale(1.05);
 }
-
