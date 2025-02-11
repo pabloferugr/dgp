@@ -109,9 +109,9 @@ background: linear-gradient(135deg, #6DD5FA 0%, #3B5998 50%, #8E44AD 100%);
     font-family: 'Patrick Hand', cursive;
 }
 
-.section.estudiante:hover {
-    transform: scale(1.03); /* Efecto sutil */
-}
+/*.section.estudiante:hover {
+    transform: scale(1.03); /* Efecto sutil 
+}*/
 
 .estudiante h2 {
     color: #FFFFFF;

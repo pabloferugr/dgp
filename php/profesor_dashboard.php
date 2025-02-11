@@ -16,6 +16,8 @@ $nombreUsuario = $user['nombre_usuario'] ?? 'Profesor';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Profesor</title>
     <link rel="stylesheet" type="text/css" href="/dgp/bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="/dgp/css/profesor_dashboard.css">
 </head>
 <body>
